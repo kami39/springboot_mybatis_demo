@@ -1,0 +1,26 @@
+
+#\u9ED8\u8BA4\u4F7F\u7528\u914D\u7F6E
+spring:
+  profiles:
+    active: dev
+
+#\u516C\u5171\u914D\u7F6E\u4E0Eprofiles\u9009\u62E9\u65E0\u5173
+
+mybatis:
+  typeAliasesPackage: com.xdd.entity
+  mapperLocations: classpath:com/demo/mapping/*.xml
+
+
+---
+
+#\u5F00\u53D1\u914D\u7F6E
+spring:
+  profiles: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/my?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root123
+    driver-class-name: com.mysql.jdbc.Driver
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
